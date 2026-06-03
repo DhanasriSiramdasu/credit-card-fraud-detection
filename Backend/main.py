@@ -29,6 +29,11 @@ class Transaction(BaseModel):
 def root():
     return ({"message":"Welcome to the Fraud Detection API"})
 
+
+@app.get("/version")
+def version():
+    return {"version": "cors-test-v1"}
+
 @app.post("/predict")
 def predict(transaction:Transaction):
     # scale amount and time
