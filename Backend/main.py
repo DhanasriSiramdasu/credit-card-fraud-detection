@@ -33,7 +33,7 @@ def root():
 
 @app.get("/version")
 def version():
-    return {"version": "cors-test-v1"}
+    return {"version": "cors-test-v2"}
 
 @app.post("/predict")
 def predict(transaction:Transaction):
