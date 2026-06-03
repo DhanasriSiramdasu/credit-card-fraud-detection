@@ -21,3 +21,19 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Python
+__pycache__/
+*.pkl
+*.csv
+venv/
+.env
+
+# Node
+node_modules/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+creditcard.csv 
