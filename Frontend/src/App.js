@@ -4,7 +4,8 @@ import ResultCard from './components/ResultCard';
 import HistoryList from './components/HistoryList';  
 import './App.css';
 
-const API = "http://localhost:8000";
+const API = process.env.REACT_APP_API_URL;
+console.log("API URL =", API);
 
 function App() {
   const [apiStatus,setApiStatus] = useState('checking');
