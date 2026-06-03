@@ -15,7 +15,7 @@ scaler = joblib.load(os.path.join(BASE_DIR, './models/scaler.pkl'))
 app=FastAPI(title="Fraud Detection API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:8000"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
