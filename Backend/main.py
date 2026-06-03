@@ -16,7 +16,7 @@ app=FastAPI(title="Fraud Detection API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000",
-                   "https://credit-card-fraud-detection-zq4f.vercel.app"],
+                   "https://vercel.com/dhanasri-siramdasus-projects/credit-card-fraud-detection-cvkm/9Tu3gRAkSzHQxubitcwZUun5DoPz"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
