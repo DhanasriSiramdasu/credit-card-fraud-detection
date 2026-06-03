@@ -16,7 +16,7 @@ app=FastAPI(title="Fraud Detection API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000",
-                   "https://creditcard-fraud-detection-ml-1.onrender.com"],
+                   "https://credit-card-fraud-detection-zq4f.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
