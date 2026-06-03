@@ -3,7 +3,7 @@ import ShapChart from './ShapChart';
 
 export default function ResultCard({result}) {
     const {prediction,fraud_probability,risk_level,top_reasons}=result;
-    const isFraud=prediction==='Fraud';
+    const prediction='Fraud';
     const colorClass=risk_level==='HIGH'?'high':risk_level==='MEDIUM'?'medium':'low';
 
   return (
