@@ -1,70 +1,209 @@
-# Getting Started with Create React App
+💳 Credit Card Fraud Detection System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack Machine Learning application that detects potentially fraudulent credit card transactions in real time using an XGBoost classification model and provides transparent AI explanations through SHAP feature attribution.
 
-## Available Scripts
+The system combines Machine Learning, Explainable AI, FastAPI, React, and Cloud Deployment into a complete end-to-end solution capable of analyzing transaction patterns and visualizing the factors influencing fraud predictions.
 
-In the project directory, you can run:
+🚀 Live Demo
 
-### `npm start`
+Frontend: (Add your Vercel URL)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Backend API: (Add your Render URL)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GitHub Repository:
+Credit Card Fraud Detection Repository
 
-### `npm test`
+📌 Project Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Credit card fraud causes billions of dollars in financial losses every year. Traditional rule-based systems often struggle to identify sophisticated fraud patterns.
 
-### `npm run build`
+This project uses a Machine Learning approach to analyze transaction characteristics and predict the likelihood of fraud. To make predictions understandable, the application integrates SHAP (SHapley Additive Explanations), allowing users to see which features most strongly influenced the model's decision.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application provides:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Real-time fraud prediction
+Fraud probability estimation
+Risk categorization
+Explainable AI insights
+Interactive visualization dashboard
+Cloud-hosted frontend and backend
+🏗 System Architecture
+User Input Transaction
+          │
+          ▼
+React Frontend (V1–V28 Features)
+          │
+          ▼
+FastAPI REST API
+          │
+          ▼
+Feature Scaling
+(Time & Amount)
+          │
+          ▼
+XGBoost Model
+          │
+          ▼
+Fraud Probability
+          │
+          ▼
+SHAP Explainability
+          │
+          ▼
+Interactive Dashboard
+✨ Key Features
+🔍 Real-Time Fraud Detection
+Predicts whether a transaction is fraudulent or legitimate
+Returns probability scores rather than simple binary classification
+Processes transactions instantly through FastAPI
+📊 Risk Assessment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Transactions are categorized into:
 
-### `npm run eject`
+Risk Level	Condition
+LOW	Probability ≤ 50%
+MEDIUM	Probability > 50%
+HIGH	Probability > 75%
+🧠 Explainable AI with SHAP
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Unlike traditional black-box models, this system explains:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Which features influenced the prediction
+Whether a feature pushed the transaction toward fraud or normal behavior
+Relative impact of each feature
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Top 5 SHAP features are displayed visually within the dashboard.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📈 Interactive Dashboard
 
-## Learn More
+The React frontend provides:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Transaction input interface
+Fraud probability visualization
+Risk-level indicators
+SHAP explanation charts
+Recent prediction history
+Sample transaction scenarios
+🧪 Built-in Testing Scenarios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Preloaded examples include:
 
-### Code Splitting
+High Risk Transaction
+Medium Risk Transaction
+Low Risk Transaction
+Normal Transaction
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This allows quick demonstration without requiring manual data entry.
 
-### Analyzing the Bundle Size
+⚙️ Machine Learning Pipeline
+Input Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The model utilizes:
 
-### Making a Progressive Web App
+V1 – V28 anonymized PCA-transformed transaction features
+Transaction Amount
+Transaction Time
+Preprocessing
+Amount scaling
+Time scaling
+Feature vector construction
+Model
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The prediction engine uses:
 
-### Advanced Configuration
+XGBoost Classifier
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+chosen for:
 
-### Deployment
+High accuracy on tabular datasets
+Strong handling of non-linear patterns
+Robust performance on imbalanced fraud datasets
+🛠 Technology Stack
+Frontend
+React.js
+JavaScript
+CSS
+Backend
+FastAPI
+Python
+Machine Learning
+XGBoost
+Scikit-learn
+SHAP
+NumPy
+Pandas
+Deployment
+Render (Backend)
+Vercel (Frontend)
+GitHub (Version Control)
+📡 API Endpoint
+Predict Transaction
+Request
+POST /predict
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Example:
 
-### `npm run build` fails to minify
+{
+  "amount": 149.62,
+  "time": 406,
+  "v_features": [
+    -1.359807,
+    -0.072781,
+    ...
+  ]
+}
+Response
+{
+  "prediction": "NORMAL",
+  "fraud_probability": 0.0012,
+  "risk_level": "LOW",
+  "top_reasons": [
+    {
+      "feature": "V14",
+      "impact": -0.2154
+    }
+  ]
+}
+🎯 Challenges Solved
+Fraud Detection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built a production-style ML pipeline capable of evaluating transaction risk in real time.
+
+Model Explainability
+
+Integrated SHAP to overcome the black-box nature of machine learning models.
+
+Full-Stack Integration
+
+Connected a React frontend with a FastAPI backend using REST APIs.
+
+Cloud Deployment
+
+Successfully deployed:
+
+Frontend on Vercel
+Backend on Render
+
+with environment variable management and CORS configuration.
+
+📸 Screenshots
+
+Add screenshots here:
+
+Dashboard
+
+(Insert screenshot)
+
+High-Risk Prediction
+
+(Insert screenshot)
+
+SHAP Explanation Visualization
+
+(Insert screenshot)
+
+👨‍💻 Author
+
+Dhanasri Siramdasu
+
+Aspiring Software Engineer & Machine Learning Engineer passionate about building end-to-end AI applications that combine predictive analytics, explainable AI, and modern web technologies.
