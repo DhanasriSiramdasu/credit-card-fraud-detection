@@ -270,7 +270,7 @@ Including:
 
 ### Dashboard
 
-<img width="1092" height="776" alt="image" src="https://github.com/user-attachments/assets/281c61ad-439c-4f2d-addd-fb03dab98166" />
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/281c61ad-439c-4f2d-addd-fb03dab98166" />
 
 
 ### High Risk Prediction
