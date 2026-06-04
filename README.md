@@ -1,37 +1,44 @@
-💳 Credit Card Fraud Detection System
+# 💳 Credit Card Fraud Detection System
 
-A full-stack Machine Learning application that detects potentially fraudulent credit card transactions in real time using an XGBoost classification model and provides transparent AI explanations through SHAP feature attribution.
+## 🚀 Overview
 
-The system combines Machine Learning, Explainable AI, FastAPI, React, and Cloud Deployment into a complete end-to-end solution capable of analyzing transaction patterns and visualizing the factors influencing fraud predictions.
+A full-stack Machine Learning application that detects potentially fraudulent credit card transactions in real time using an **XGBoost classification model** and provides transparent AI explanations through **SHAP (SHapley Additive Explanations)**.
 
-🚀 Live Demo
+The system combines **Machine Learning, Explainable AI, FastAPI, React.js, and Cloud Deployment** into a complete end-to-end solution capable of analyzing transaction patterns and visualizing the factors influencing fraud predictions.
 
-Frontend: (Add your Vercel URL)
+---
 
-Backend API: (Add your Render URL)
+## 🔗 Live Demo
 
-GitHub Repository:
-Credit Card Fraud Detection Repository
+**Frontend:** https://YOUR-VERCEL-URL.vercel.app
 
-📌 Project Overview
+**Backend API:** https://YOUR-RENDER-URL.onrender.com
 
-Credit card fraud causes billions of dollars in financial losses every year. Traditional rule-based systems often struggle to identify sophisticated fraud patterns.
+**GitHub Repository:** https://github.com/YOUR_USERNAME/credit-card-fraud-detection
 
-This project uses a Machine Learning approach to analyze transaction characteristics and predict the likelihood of fraud. To make predictions understandable, the application integrates SHAP (SHapley Additive Explanations), allowing users to see which features most strongly influenced the model's decision.
+---
 
-The application provides:
+## 📌 Problem Statement
 
-Real-time fraud prediction
-Fraud probability estimation
-Risk categorization
-Explainable AI insights
-Interactive visualization dashboard
-Cloud-hosted frontend and backend
-🏗 System Architecture
-User Input Transaction
+Credit card fraud results in billions of dollars in losses annually. Traditional rule-based systems often struggle to identify evolving fraud patterns and provide little insight into why a transaction is flagged.
+
+This project addresses those challenges by:
+
+* Detecting fraudulent transactions using Machine Learning
+* Providing fraud probability scores
+* Categorizing transaction risk levels
+* Explaining predictions through SHAP feature attribution
+* Delivering results through an interactive web dashboard
+
+---
+
+## 🏗️ System Architecture
+
+```text
+User Transaction Input
           │
           ▼
-React Frontend (V1–V28 Features)
+React Frontend
           │
           ▼
 FastAPI REST API
@@ -51,98 +58,116 @@ SHAP Explainability
           │
           ▼
 Interactive Dashboard
-✨ Key Features
-🔍 Real-Time Fraud Detection
-Predicts whether a transaction is fraudulent or legitimate
-Returns probability scores rather than simple binary classification
-Processes transactions instantly through FastAPI
-📊 Risk Assessment
+```
 
-Transactions are categorized into:
+---
 
-Risk Level	Condition
-LOW	Probability ≤ 50%
-MEDIUM	Probability > 50%
-HIGH	Probability > 75%
-🧠 Explainable AI with SHAP
+## ✨ Features
 
-Unlike traditional black-box models, this system explains:
+### 🔍 Real-Time Fraud Detection
 
-Which features influenced the prediction
-Whether a feature pushed the transaction toward fraud or normal behavior
-Relative impact of each feature
+* Predicts whether a transaction is fraudulent or legitimate
+* Returns fraud probability scores
+* Provides instant API responses through FastAPI
+* Supports custom transaction inputs
 
-Top 5 SHAP features are displayed visually within the dashboard.
+### 📊 Risk Assessment
 
-📈 Interactive Dashboard
+| Risk Level | Condition         |
+| ---------- | ----------------- |
+| LOW        | Probability ≤ 50% |
+| MEDIUM     | Probability > 50% |
+| HIGH       | Probability > 75% |
 
-The React frontend provides:
+### 🧠 Explainable AI (SHAP)
 
-Transaction input interface
-Fraud probability visualization
-Risk-level indicators
-SHAP explanation charts
-Recent prediction history
-Sample transaction scenarios
-🧪 Built-in Testing Scenarios
+Unlike traditional black-box models, the system explains:
 
-Preloaded examples include:
+* Which features influenced the prediction
+* Whether a feature pushed the transaction toward fraud or normal behavior
+* Relative importance of each feature
 
-High Risk Transaction
-Medium Risk Transaction
-Low Risk Transaction
-Normal Transaction
+The dashboard displays the **Top 5 SHAP Features** contributing to the prediction.
 
-This allows quick demonstration without requiring manual data entry.
+### 📈 Interactive Dashboard
 
-⚙️ Machine Learning Pipeline
-Input Features
+The React frontend includes:
 
-The model utilizes:
+* Transaction input form
+* Fraud probability visualization
+* Risk-level indicators
+* SHAP explanation charts
+* Prediction history tracking
+* Sample transaction scenarios
 
-V1 – V28 anonymized PCA-transformed transaction features
-Transaction Amount
-Transaction Time
-Preprocessing
-Amount scaling
-Time scaling
-Feature vector construction
-Model
+### 🧪 Built-in Demo Scenarios
 
-The prediction engine uses:
+The application provides preloaded examples for quick testing:
 
-XGBoost Classifier
+* 🔴 High Risk Transaction
+* 🟡 Medium Risk Transaction
+* 🟠 Low Risk Transaction
+* ✅ Normal Transaction
 
-chosen for:
+---
 
-High accuracy on tabular datasets
-Strong handling of non-linear patterns
-Robust performance on imbalanced fraud datasets
-🛠 Technology Stack
-Frontend
-React.js
-JavaScript
-CSS
-Backend
-FastAPI
-Python
-Machine Learning
-XGBoost
-Scikit-learn
-SHAP
-NumPy
-Pandas
-Deployment
-Render (Backend)
-Vercel (Frontend)
-GitHub (Version Control)
-📡 API Endpoint
-Predict Transaction
-Request
+## ⚙️ Machine Learning Pipeline
+
+### Input Features
+
+The model uses:
+
+* V1–V28 anonymized PCA-transformed transaction features
+* Transaction Amount
+* Transaction Time
+
+### Preprocessing
+
+* Scaling of transaction amount
+* Scaling of transaction time
+* Feature vector construction
+* Model-ready feature transformation
+
+### Model
+
+**XGBoost Classifier**
+
+Selected because of:
+
+* Strong performance on tabular datasets
+* High predictive accuracy
+* Ability to model complex non-linear relationships
+* Robust handling of fraud detection datasets
+
+---
+
+## 📡 API Endpoints
+
+### Health Check
+
+```http
+GET /
+```
+
+Response:
+
+```json
+{
+  "message": "Welcome to the Fraud Detection API"
+}
+```
+
+---
+
+### Predict Transaction
+
+```http
 POST /predict
+```
 
-Example:
+Request:
 
+```json
 {
   "amount": 149.62,
   "time": 406,
@@ -152,7 +177,11 @@ Example:
     ...
   ]
 }
-Response
+```
+
+Response:
+
+```json
 {
   "prediction": "NORMAL",
   "fraud_probability": 0.0012,
@@ -164,46 +193,110 @@ Response
     }
   ]
 }
-🎯 Challenges Solved
-Fraud Detection
+```
 
-Built a production-style ML pipeline capable of evaluating transaction risk in real time.
+---
 
-Model Explainability
+## 📊 Explainability Dashboard
 
-Integrated SHAP to overcome the black-box nature of machine learning models.
+The application visualizes SHAP feature contributions:
 
-Full-Stack Integration
+* 🔴 Red bars indicate features pushing the prediction toward **Fraud**
+* 🔵 Blue bars indicate features pushing the prediction toward **Normal**
+* Feature importance is ranked by SHAP impact magnitude
 
-Connected a React frontend with a FastAPI backend using REST APIs.
+This makes model decisions interpretable and transparent.
 
-Cloud Deployment
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
+* React.js
+* JavaScript
+* CSS3
+
+### Backend
+
+* FastAPI
+* Python
+
+### Machine Learning
+
+* XGBoost
+* Scikit-Learn
+* SHAP
+* NumPy
+* Pandas
+
+### Deployment
+
+* Render (Backend Hosting)
+* Vercel (Frontend Hosting)
+* GitHub (Version Control)
+
+---
+
+## 🎯 Key Challenges Solved
+
+### Fraud Detection Pipeline
+
+Built a production-style machine learning workflow capable of evaluating transaction risk in real time.
+
+### Explainable AI Integration
+
+Implemented SHAP explanations to improve model transparency and user trust.
+
+### Full-Stack Integration
+
+Connected a React frontend with a FastAPI backend through REST APIs and JSON communication.
+
+### Cloud Deployment
 
 Successfully deployed:
 
-Frontend on Vercel
-Backend on Render
+* Frontend on Vercel
+* Backend on Render
 
-with environment variable management and CORS configuration.
+Including:
 
-📸 Screenshots
+* Environment variable configuration
+* API integration
+* CORS management
+* Production deployment workflow
 
-Add screenshots here:
+---
 
-Dashboard
+## 📸 Application Screenshots
 
-(Insert screenshot)
+### Dashboard
 
-High-Risk Prediction
+*Add screenshot here*
 
-(Insert screenshot)
+### High Risk Prediction
 
-SHAP Explanation Visualization
+*Add screenshot here*
 
-(Insert screenshot)
+### SHAP Explanation Visualization
 
-👨‍💻 Author
+*Add screenshot here*
 
-Dhanasri Siramdasu
+---
 
-Aspiring Software Engineer & Machine Learning Engineer passionate about building end-to-end AI applications that combine predictive analytics, explainable AI, and modern web technologies.
+## 📈 Future Enhancements
+
+* User authentication and login system
+* Transaction data storage and analytics
+* Batch transaction fraud analysis
+* Real-time streaming predictions
+* Advanced fraud monitoring dashboard
+* Model retraining pipeline using MLOps
+
+---
+
+## 👨‍💻 Author
+
+**Dhanasri Siramdasu**
+
+Aspiring Software Engineer and Machine Learning Engineer passionate about building end-to-end AI applications that combine predictive analytics, explainable AI, and modern web technologies.
