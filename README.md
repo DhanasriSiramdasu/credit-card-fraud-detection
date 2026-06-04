@@ -270,17 +270,17 @@ Including:
 
 ### Dashboard
 
-<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/281c61ad-439c-4f2d-addd-fb03dab98166" />
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/281c61ad-439c-4f2d-addd-fb03dab98166" />
 
 
 ### High Risk Prediction
 
-<img width="838" height="428" alt="image" src="https://github.com/user-attachments/assets/49c2afec-084e-4819-a581-6724f8585946" />
+<img width="800" height="428" alt="image" src="https://github.com/user-attachments/assets/49c2afec-084e-4819-a581-6724f8585946" />
 
 
 ### SHAP Explanation Visualization
 
-<img width="846" height="475" alt="image" src="https://github.com/user-attachments/assets/b79671f5-22a2-4534-b8f6-1d24f738538c" />
+<img width="800" height="475" alt="image" src="https://github.com/user-attachments/assets/b79671f5-22a2-4534-b8f6-1d24f738538c" />
 
 
 ---
