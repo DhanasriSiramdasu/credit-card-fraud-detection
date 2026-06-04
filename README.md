@@ -10,11 +10,9 @@ The system combines **Machine Learning, Explainable AI, FastAPI, React.js, and C
 
 ## 🔗 Live Demo
 
-**Frontend:** https://YOUR-VERCEL-URL.vercel.app
+**Frontend:**https://credit-card-fraud-detection-weld.vercel.app
 
-**Backend API:** https://YOUR-RENDER-URL.onrender.com
-
-**GitHub Repository:** https://github.com/YOUR_USERNAME/credit-card-fraud-detection
+**Backend API:** https://credit-card-fraud-detection-4nsk.onrender.com
 
 ---
 
@@ -272,21 +270,23 @@ Including:
 
 ### Dashboard
 
-*Add screenshot here*
+<img width="1092" height="776" alt="image" src="https://github.com/user-attachments/assets/281c61ad-439c-4f2d-addd-fb03dab98166" />
+
 
 ### High Risk Prediction
 
-*Add screenshot here*
+<img width="838" height="428" alt="image" src="https://github.com/user-attachments/assets/49c2afec-084e-4819-a581-6724f8585946" />
+
 
 ### SHAP Explanation Visualization
 
-*Add screenshot here*
+<img width="846" height="475" alt="image" src="https://github.com/user-attachments/assets/b79671f5-22a2-4534-b8f6-1d24f738538c" />
+
 
 ---
 
 ## 📈 Future Enhancements
 
-* User authentication and login system
 * Transaction data storage and analytics
 * Batch transaction fraud analysis
 * Real-time streaming predictions
