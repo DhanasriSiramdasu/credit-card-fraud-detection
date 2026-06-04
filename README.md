@@ -139,6 +139,35 @@ Selected because of:
 
 ---
 
+## 📊 Model Performance
+
+The fraud detection model was trained using a fine-tuned XGBoost Classifier on a highly imbalanced credit card transaction dataset.
+
+### Classification Report
+
+| Class | Precision | Recall | F1-Score |
+|---------|-----------|---------|---------|
+| Normal | 1.00 | 1.00 | 1.00 |
+| Fraud | 0.58 | 0.89 | 0.70 |
+
+### Overall Metrics
+
+| Metric | Score |
+|----------|---------|
+| Accuracy | 99.83% |
+| ROC-AUC | 0.9801 |
+| PR-AUC | 0.8795 |
+| Fraud Recall | 89% |
+| Fraud F1-Score | 70% |
+
+### Key Insights
+
+- Achieved **98.01% ROC-AUC**, demonstrating strong discrimination between fraudulent and legitimate transactions.
+- Achieved **87.95% Precision-Recall AUC**, a critical metric for highly imbalanced fraud detection datasets.
+- Successfully identified **89% of fraudulent transactions**, minimizing missed fraud cases.
+- Prioritized high recall for fraud detection while maintaining strong overall model performance.
+- Integrated SHAP explainability to provide transparent and interpretable predictions.
+
 ## 📡 API Endpoints
 
 ### Health Check
